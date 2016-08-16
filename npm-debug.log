@@ -1,89 +1,33 @@
 0 info it worked if it ends with ok
-1 verbose cli [ '/usr/local/bin/node', '/usr/local/bin/npm', 'publish' ]
+1 verbose cli [ '/usr/local/bin/node',
+1 verbose cli   '/usr/local/bin/npm',
+1 verbose cli   'version',
+1 verbose cli   'minor' ]
 2 info using npm@3.3.9
 3 info using node@v5.0.0
-4 verbose publish [ '.' ]
-5 silly cache add args [ '.', null ]
-6 verbose cache add spec .
-7 silly cache add parsed spec Result {
-7 silly cache add   raw: '.',
-7 silly cache add   scope: null,
-7 silly cache add   name: null,
-7 silly cache add   rawSpec: '.',
-7 silly cache add   spec: '/Users/staging/Desktop/web_/nodejs/npm/pacu',
-7 silly cache add   type: 'directory' }
-8 verbose addLocalDirectory /Users/staging/.npm/pacu/1.0.0/package.tgz not in flight; packing
-9 info lifecycle pacu@1.0.0~prepublish: pacu@1.0.0
-10 silly lifecycle pacu@1.0.0~prepublish: no script for prepublish, continuing
-11 verbose tar pack [ '/Users/staging/.npm/pacu/1.0.0/package.tgz',
-11 verbose tar pack   '/Users/staging/Desktop/web_/nodejs/npm/pacu' ]
-12 verbose tarball /Users/staging/.npm/pacu/1.0.0/package.tgz
-13 verbose folder /Users/staging/Desktop/web_/nodejs/npm/pacu
-14 verbose addLocalTarball adding from inside cache /Users/staging/.npm/pacu/1.0.0/package.tgz
-15 silly cache afterAdd pacu@1.0.0
-16 verbose afterAdd /Users/staging/.npm/pacu/1.0.0/package/package.json not in flight; writing
-17 verbose afterAdd /Users/staging/.npm/pacu/1.0.0/package/package.json written
-18 silly publish { name: 'pacu',
-18 silly publish   version: '1.0.0',
-18 silly publish   description: 'An easy promise tool to finish lists of promises by series or parallet.',
-18 silly publish   main: 'index.js',
-18 silly publish   scripts: { test: 'echo "Error: no test specified" && exit 1' },
-18 silly publish   author: { name: 'Peter Chang', email: 'wahengchang@gmail.com' },
-18 silly publish   license: 'ISC',
-18 silly publish   dependencies: { underscore: '^1.8.3' },
-18 silly publish   readme: '# pacu\n\nAn easy promise tool to finish lists of promises by series or parallet.\n\n\n[![NPM](https://nodei.co/npm/pacu.png?downloads=true&downloadRank=true)](https://www.npmjs.com/package/pacu)\n\n\n## Install\n\n```\n$ npm install --save pacu\n```\n\n## Usage\n\nInitializing gcloud \n```js\nvar pacu = require("pacu")\n```\n\n```js\n## Usage\n//processing promiseList by series\npacu.series(promisesList).then(function(result) {\n    console.log("Result series: ", result)\n},function(err){\n    console.log("Error series: ", result)\n})\n\n//processing promiseList by parallel\npacu.parallel(promisesList).then(function(result) {\n    console.log("Result parallel: ", result)\n})\n\n```\n\n\n## License\n\n\n[MIT](http://vjpr.mit-license.org)',
-18 silly publish   readmeFilename: 'README.md',
-18 silly publish   _id: 'pacu@1.0.0',
-18 silly publish   _shasum: '4921ecfe649aafc9f003d22e3018574fa64940b1',
-18 silly publish   _from: '.' }
-19 verbose getPublishConfig undefined
-20 silly mapToRegistry name pacu
-21 silly mapToRegistry using default registry
-22 silly mapToRegistry registry https://registry.npmjs.org/
-23 silly mapToRegistry uri https://registry.npmjs.org/pacu
-24 verbose publish registryBase https://registry.npmjs.org/
-25 silly publish uploading /Users/staging/.npm/pacu/1.0.0/package.tgz
-26 verbose request uri https://registry.npmjs.org/pacu
-27 verbose request sending authorization for write operation
-28 info attempt registry request try #1 at 1:51:29 PM
-29 verbose request using bearer token for auth
-30 verbose request id 467af2b5de845d1f
-31 http request PUT https://registry.npmjs.org/pacu
-32 http 403 https://registry.npmjs.org/pacu
-33 verbose headers { 'content-type': 'application/json',
-33 verbose headers   'cache-control': 'max-age=300',
-33 verbose headers   'content-length': '95',
-33 verbose headers   'accept-ranges': 'bytes',
-33 verbose headers   date: 'Fri, 12 Aug 2016 05:51:31 GMT',
-33 verbose headers   via: '1.1 varnish',
-33 verbose headers   connection: 'keep-alive',
-33 verbose headers   'x-served-by': 'cache-hkg6822-HKG',
-33 verbose headers   'x-cache': 'MISS',
-33 verbose headers   'x-cache-hits': '0',
-33 verbose headers   'x-timer': 'S1470981090.302356,VS0,VE811',
-33 verbose headers   vary: 'Accept-Encoding' }
-34 verbose request invalidating /Users/staging/.npm/registry.npmjs.org/pacu on PUT
-35 error publish Failed PUT 403
-36 verbose stack Error: "You cannot publish over the previously published version 1.0.0." : pacu
-36 verbose stack     at makeError (/usr/local/lib/node_modules/npm/node_modules/npm-registry-client/lib/request.js:264:12)
-36 verbose stack     at CachingRegistryClient.<anonymous> (/usr/local/lib/node_modules/npm/node_modules/npm-registry-client/lib/request.js:252:14)
-36 verbose stack     at Request._callback (/usr/local/lib/node_modules/npm/node_modules/npm-registry-client/lib/request.js:172:14)
-36 verbose stack     at Request.self.callback (/usr/local/lib/node_modules/npm/node_modules/request/request.js:198:22)
-36 verbose stack     at emitTwo (events.js:87:13)
-36 verbose stack     at Request.emit (events.js:172:7)
-36 verbose stack     at Request.<anonymous> (/usr/local/lib/node_modules/npm/node_modules/request/request.js:1082:10)
-36 verbose stack     at emitOne (events.js:82:20)
-36 verbose stack     at Request.emit (events.js:169:7)
-36 verbose stack     at IncomingMessage.<anonymous> (/usr/local/lib/node_modules/npm/node_modules/request/request.js:1009:12)
-37 verbose statusCode 403
-38 verbose pkgid pacu
-39 verbose cwd /Users/staging/Desktop/web_/nodejs/npm/pacu
-40 error Darwin 14.5.0
-41 error argv "/usr/local/bin/node" "/usr/local/bin/npm" "publish"
-42 error node v5.0.0
-43 error npm  v3.3.9
-44 error code E403
-45 error "You cannot publish over the previously published version 1.0.0." : pacu
-46 error If you need help, you may report this error at:
-46 error     <https://github.com/npm/npm/issues>
-47 verbose exit [ 1, true ]
+4 info git [ 'status', '--porcelain' ]
+5 verbose stack Error: Git working directory not clean.
+5 verbose stack M index.js
+5 verbose stack D npm-debug.log
+5 verbose stack M package.json
+5 verbose stack     at /usr/local/lib/node_modules/npm/lib/version.js:172:21
+5 verbose stack     at ChildProcess.exithandler (child_process.js:194:7)
+5 verbose stack     at emitTwo (events.js:87:13)
+5 verbose stack     at ChildProcess.emit (events.js:172:7)
+5 verbose stack     at maybeClose (internal/child_process.js:818:16)
+5 verbose stack     at Socket.<anonymous> (internal/child_process.js:319:11)
+5 verbose stack     at emitOne (events.js:77:13)
+5 verbose stack     at Socket.emit (events.js:169:7)
+5 verbose stack     at Pipe._onclose (net.js:469:12)
+6 verbose cwd /Users/staging/Desktop/web_/nodejs/npm/pacu
+7 error Darwin 14.5.0
+8 error argv "/usr/local/bin/node" "/usr/local/bin/npm" "version" "minor"
+9 error node v5.0.0
+10 error npm  v3.3.9
+11 error Git working directory not clean.
+11 error M index.js
+11 error D npm-debug.log
+11 error M package.json
+12 error If you need help, you may report this error at:
+12 error     <https://github.com/npm/npm/issues>
+13 verbose exit [ 1, true ]

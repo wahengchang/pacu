@@ -6,6 +6,15 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@github.com/wahengchang/pacu"
+  },
+  "keywords": [
+    "promise",
+    "series",
+    "parallel"
+  ],
   "author": "Peter Chang <wahengchang@gmail.com>",
   "license": "ISC",
   "dependencies": {
