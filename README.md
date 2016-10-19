@@ -44,11 +44,6 @@ pacu.series(promisesList).then(function(result) {
     console.log("Error series: ", result)
 })
 
-//processing promiseList by parallel
-pacu.parallel(promisesList).then(function(result) {
-    console.log("Result parallel: ", result)
-})
-
 ```
 
 
