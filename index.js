@@ -1,26 +1,23 @@
+var PromiseSeries = require('promise-series')
+var series = new PromiseSeries();
+
 var API = function() {}
 
-API.series = function(promisesList, result) {
+API.series = function(promisesList) {
+
     return new Promise(function(resolve, reject) {
 
         var returnJ = []
-
-        var sequence = Promise.resolve();
         
         promisesList.forEach(function(pro) {
-            sequence = sequence.then(function() {
-                return pro;
-            }).then(function(result) {
-                returnJ.push(result)
-            });
-
+            series.add(pro)
         })
 
-        sequence.then(function() {
-            resolve(returnJ)
-        }, function(err) {
-            reject(err)
-        })
+        series.run().then(function(result) {
+            resolve(result)
+        },function(err){
+            rejectt(err)
+        });
 
     })
 }

@@ -1,7 +1,6 @@
 # pacu
 
-An easy promise tool to finish lists of promises by series or parallet.
-
+It is a tool to solve the problem of, continuously running promise functions with parameter one by one. 
 
 [![NPM](https://nodei.co/npm/pacu.png?downloads=true&downloadRank=true)](https://www.npmjs.com/package/pacu)
 
@@ -14,9 +13,26 @@ $ npm install --save pacu
 
 ## Usage
 
-Initializing gcloud 
+Initializing pacu 
 ```js
 var pacu = require("pacu")
+```
+
+
+## Important
+
+To accomplish running series promise, the object format of _**promise function**_ and _**promise function with parameter**_ are different in js, so it required special handling when adding a promise to an array list:
+
+```js
+
+    promisesList.push(function(){
+      return new Promise(function(resolvet, rejectt) {
+        genPromist(i).then(function(result){
+          resolvet(result)
+        })
+      })
+    })
+
 ```
 
 ```js
