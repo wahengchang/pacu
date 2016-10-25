@@ -1,6 +1,6 @@
 # pacu
 
-It is a tool to solve the problem of, continuously running promise functions with parameter one by one. 
+It is a tool to solve the problem of resolving serise promise functions with parameter continuously. And there is not a solution but only resolving parallelly.
 
 [![NPM](https://nodei.co/npm/pacu.png?downloads=true&downloadRank=true)](https://www.npmjs.com/package/pacu)
 
@@ -21,7 +21,7 @@ var pacu = require("pacu")
 
 ## Important
 
-To accomplish running series promise, the object format of _**promise function**_ and _**promise function with parameter**_ are different in js, so it required special handling when adding a promise to an array list:
+To accomplish running promise function one after one is difficult, because the object format of _**promise function**_ and _**promise function with parameter**_ are different in js ( issue of anonymous function with parameters ). So that handling this issue needed to push _**promise function(not a promise)**_ to an array list, which will be resolved:
 
 ```js
 
