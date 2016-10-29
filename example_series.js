@@ -14,11 +14,7 @@ var inputList = [1, 2, 3, 4]
 
 inputList.forEach(function(i) {
     promisesList.push(function(){
-      return new Promise(function(resolvet, rejectt) {
-        genPromist(i).then(function(result){
-          resolvet(result)
-        })
-      })
+        return genPromist(i)
     })
 })
 

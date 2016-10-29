@@ -25,13 +25,20 @@ To accomplish running promise function one after one is difficult, because the o
 
 ```js
 
-    promisesList.push(function(){
-      return new Promise(function(resolvet, rejectt) {
-        genPromist(i).then(function(result){
-          resolvet(result)
+    var genPromist = function(para) {
+        return new Promise(function(resolve, reject) {
+            setTimeout(function() {
+                console.log('para: ', para)
+                resolve(para * para)
+            }, 1000)
         })
-      })
-    })
+    };
+
+    var promisesList = [];
+
+    promisesList.push(function(){
+        return genPromist(i)
+    });
 
 ```
 
@@ -42,7 +49,7 @@ pacu.series(promisesList).then(function(result) {
     console.log("Result series: ", result)
 },function(err){
     console.log("Error series: ", result)
-})
+});
 
 ```
 
