@@ -11,6 +11,7 @@
     "url": "git+ssh://git@github.com/wahengchang/pacu"
   },
   "keywords": [
+    "promise",
     "promises",
     "serie",
     "series",
