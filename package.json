@@ -10,10 +10,14 @@
     "type": "git",
     "url": "git+ssh://git@github.com/wahengchang/pacu"
   },
-  "keywords": [
-    "promise",
-    "series",
-    "parallel"
+  "keywords": [ 
+    "promises",  
+    "serie",  
+    "series",  
+    "sequence",  
+    "consecutively",
+    "queue",
+    "parameter"
   ],
   "author": "Peter Chang <wahengchang@gmail.com>",
   "license": "ISC",
