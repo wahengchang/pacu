@@ -1,6 +1,6 @@
 {
   "name": "pacu",
-  "version": "1.5.0",
+  "version": "1.6.0",
   "description": "",
   "main": "index.js",
   "scripts": {
@@ -10,11 +10,11 @@
     "type": "git",
     "url": "git+ssh://git@github.com/wahengchang/pacu"
   },
-  "keywords": [ 
-    "promises",  
-    "serie",  
-    "series",  
-    "sequence",  
+  "keywords": [
+    "promises",
+    "serie",
+    "series",
+    "sequence",
     "consecutively",
     "queue",
     "parameter"
