@@ -24,5 +24,8 @@
   "license": "ISC",
   "dependencies": {
     "promise-series": "^1.0.0"
+  },
+  "devDependencies": {
+    "should": "^11.1.1"
   }
 }

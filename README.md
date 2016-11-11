@@ -45,6 +45,9 @@ To accomplish running promise function one after one is difficult, because the o
 ```js
 ## Usage
 //processing promiseList by series
+
+var pacu = require("pacu")
+
 pacu.series(promisesList).then(function(result) {
     console.log("Result series: ", result)
 },function(err){
@@ -53,6 +56,20 @@ pacu.series(promisesList).then(function(result) {
 
 ```
 
+```js
+## Usage closure design
+//processing promiseList by series in closure design
+
+var PACU = require("pacu")
+var pacu = new PACU(promisesList)
+
+pacu.series(promisesList).then(function(result) {
+    console.log("Result series: ", result)
+},function(err){
+    console.log("Error series: ", result)
+});
+
+```
 
 ## License
 
